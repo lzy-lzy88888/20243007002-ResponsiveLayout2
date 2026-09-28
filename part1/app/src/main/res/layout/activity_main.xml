@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/layer1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1667">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lab 1"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/layer2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/layer1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1667">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Responsive Layout 1"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layer3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/layer2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1667">
+
+        <TextView
+            android:id="@+id/tvThis"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#ff0000"
+            android:text="This"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvIs"/>
+
+        <TextView
+            android:id="@+id/tvIs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#0000ff"
+            android:text="is"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/tvThis"
+            app:layout_constraintEnd_toStartOf="@id/tvMy"/>
+
+        <TextView
+            android:id="@+id/tvMy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#663399"
+            android:text="my"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/tvIs"
+            app:layout_constraintEnd_toStartOf="@id/tvFirst"/>
+
+        <TextView
+            android:id="@+id/tvFirst"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#ffff00"
+            android:text="first"
+            android:textColor="#000000"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/tvMy"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <FrameLayout
+        android:id="@+id/layer4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#000000"
+        app:layout_constraintTop_toBottomOf="@id/layer3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3333">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android Application"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layer5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/layer4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnChange"
+            android:layout_width="180dp"
+            android:layout_height="84dp"
+            android:text="Change"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#7b68bb"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnCancel"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="180dp"
+            android:layout_height="84dp"
+            android:text="Cancel"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#7b68bb"
+            android:layout_marginStart="32dp"
+            app:layout_constraintStart_toEndOf="@id/btnChange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
